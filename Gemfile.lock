@@ -5,6 +5,8 @@ GEM
     rack-protection (1.5.0)
       rack
     redcarpet (2.2.2)
+    rollin (0.0.4)
+      redcarpet
     shotgun (0.9)
       rack (>= 1.0)
     sinatra (1.4.2)
@@ -21,7 +23,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  redcarpet
+  rollin
   shotgun
   sinatra
   slim
