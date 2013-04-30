@@ -1,0 +1,12 @@
+doctype html
+html
+  head
+    title mara.nu
+    meta name="keywords" content="mara.nu"
+    meta name="author" content="marano"
+
+  body
+    h1 mara.nu
+
+    - @articles.each do |article|
+      div == article.body

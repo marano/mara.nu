@@ -1,5 +1,6 @@
 class Controller < Sinatra::Base
   get '/' do
-    'Hello World!'
+    @articles = Rollin.new.articles
+    slim :home
   end
 end
