@@ -1,3 +1,5 @@
+## Yet another Ruby blog
+
 I recently moved to China, and the past three days was a big holiday here. My Chinese is still pretty bad and it kinda of limits my, let's say, entertainment options. And that's why I ended up studying Javascript frameworks in order to do a presentation at the office. After jumping from blog to blog I've gathered some amount of data around this topic in a big markdown file. And then I thought - wouldn't it be great if could publish it on blog? I have several stuff that I want to post about and now seemed a perfect time to start it. So let's stop talking about me.
 
 So I went after blogging engines. If you ask me why I didn't scaffold it with Rails I'm gonna blow your head. My requirements were that it needed to be easy to style so I could make it look pretty, that it was filesystem based so I could manage it with git, and that it was markdown. [The Ruby Toolbox](https://www.ruby-toolbox.com/) has listed a bunch of Ruby engines in it's [Blog Engine](https://www.ruby-toolbox.com/categories/Blog_Engines), no wonder! And couldn't find much more than that at the webz. 
@@ -6,7 +8,7 @@ I won't go in detail in any of them. But it is worth mention in case you want to
 
 So I started building the website with Sinatra (yes! it still take less lines than any Javascript framework) and eventually ported out the engine to a gem. And [rollin](http://github.com/marano/rollin) was born!
 
-### rollin
+## rollin
 
 Rollin is a Ruby blog library. It is filesystem based and currently supports Markdown. Currently it will render your articles and provides archiving.
 
@@ -76,10 +78,10 @@ And have the post displayed with.
 
 You can find a more detailed documentation at [github](http://github/com/marano/rollin).
 
-#### Concerns
+### Concerns
 
 Since it is meant to be used in a blogging domain it is not optimized with caching. You should implement cache in the infrastructure layer, what shouldn't be hard in a mostly static environment. I use the awesome Varnish, which also allows me to have several domains pointing to different applications running on the same server.
 
-#### Future
+### Future
 
 For the future it would be nice to have it working with any markup languages. Also having the ability to setup other sources like a another git repository, google docs account, or dropbox could make it appealing for some people.
