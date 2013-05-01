@@ -84,4 +84,4 @@ Since it is meant to be used in a blogging domain it is not optimized with cachi
 
 ### Future
 
-For the future it would be nice to have it working with any markup languages. Also having the ability to setup other sources like a another git repository, google docs account, or dropbox could make it appealing for some people.
+For the future it would be nice to have it working with any markup languages. Also having the ability to setup other sources like a git repository, google docs account, or dropbox could make it appealing for some people.
