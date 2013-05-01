@@ -1,10 +1,15 @@
 GEM
   remote: https://rubygems.org/
   specs:
+    commonjs (0.2.6)
+    less (2.3.2)
+      commonjs (~> 0.2.6)
+    libv8 (3.11.8.17)
     rack (1.5.2)
     rack-protection (1.5.0)
       rack
     redcarpet (2.2.2)
+    ref (1.0.4)
     rollin (0.0.10)
       redcarpet
     shotgun (0.9)
@@ -17,13 +22,18 @@ GEM
       temple (~> 0.6.3)
       tilt (~> 1.3.3)
     temple (0.6.4)
+    therubyracer (0.11.4)
+      libv8 (~> 3.11.8.12)
+      ref
     tilt (1.3.7)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
+  less
   rollin
   shotgun
   sinatra
   slim
+  therubyracer
