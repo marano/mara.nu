@@ -6,6 +6,7 @@ gem 'sinatra-assetpack'
 gem 'therubyracer' # required by less
 gem 'less'
 gem 'rollin'
+gem 'rack-google-analytics'
 
 group :development do
   gem 'pry'
