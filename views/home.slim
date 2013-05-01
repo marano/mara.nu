@@ -1,13 +1,4 @@
-doctype html
-html
-  head
-    title mara.nu
-    meta name="keywords" content="mara.nu"
-    meta name="author" content="marano"
-    == css :application
-
-  body
-    h1 mara.nu
-
-    - @articles.each do |article|
-      div == article.body
+- @articles.each do |article|
+  div
+    a href=article.link_to_self
+      = article.title
