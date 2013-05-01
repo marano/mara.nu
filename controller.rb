@@ -38,6 +38,11 @@ class Controller < Sinatra::Base
     @article = blog.find_article_by_id(params[:id])
     slim :article
   end
+
+  get '/rss.xml' do
+    @articles = blog.articles
+    builder :rss
+  end
 end
 
 class Integer
@@ -57,7 +62,11 @@ class Integer
 end
 
 class Rollin::Article
-  def link_to_self
+  def relative_link_to_self
     "/article/#{id}"
+  end
+
+  def link_to_self
+    "http://mara.nu/#{relative_link_to_self}"
   end
 end

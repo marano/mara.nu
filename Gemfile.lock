@@ -2,6 +2,7 @@ GEM
   remote: https://rubygems.org/
   specs:
     backports (3.3.0)
+    builder (3.2.0)
     coderay (1.0.9)
     commonjs (0.2.6)
     jsmin (1.0.1)
@@ -49,6 +50,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  builder
   less
   pry
   rack-google-analytics
