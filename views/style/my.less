@@ -1,6 +1,66 @@
 @import "variables.less";
 
-.title a, .title a:hover {
-  color: @textColor;
+// layout
+
+a:hover {
   text-decoration: none;
+}
+
+.header {
+  .title a {
+    color: @textColor;
+    &:hover {
+      color: @linkColorHover;
+    }
+  }
+}
+
+.container {
+  margin-top: 20px;
+}
+
+.content {
+  margin-top: 40px;
+}
+
+.footer {
+  clear: both;
+  margin-top: 40px;
+}
+
+// home
+
+.article-entry {
+  margin-bottom: 40px;
+  clear: both;
+
+  .date {
+    float: left;
+    margin-right: 20px;
+    line-height: 14px;
+
+    .year, .day {
+      font-size: 70%;
+    }
+  }
+
+  .title-home h2 {
+    line-height: 45px;
+    font-size: 50px;
+  }
+}
+
+// article
+
+.article-entry {
+  .title-article {
+    line-height: 45px;
+    font-size: 50px;
+  }
+
+  .body {
+    font-family: @serifFontFamily;
+    font-size: 16px;
+    margin-top: 40px;
+  }
 }

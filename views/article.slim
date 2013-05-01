@@ -1,1 +1,12 @@
-== @article.body
+.article-entry
+  .date
+    .year
+      = @article.year
+    .month
+      = @article.month.to_month
+    .day
+      = @article.day.ordinal
+  h1.title-article
+    == @article.title
+  .body
+    == @article.body

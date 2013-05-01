@@ -1,4 +1,13 @@
 - @articles.each do |article|
-  div
-    a href=article.link_to_self
-      = article.title
+  .article-entry
+    .date
+      .year
+        = article.year
+      .month
+        = article.month.to_month
+      .day
+        = article.day.ordinal
+    .title-home
+      h2
+        a href=article.link_to_self
+          = article.title
