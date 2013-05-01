@@ -9,10 +9,16 @@ class Controller < Sinatra::Base
     Less.paths << 'views/style/bootstrap'
 
     serve '/style', from: 'views/style'
+    serve '/js', from: 'js'
 
     css :application, '/style/application.css', [
       '/style/bootstrap/bootstrap.css',
-      '/style/my.css'
+      '/style/my.css',
+      '/js/highlight.js/styles/tomorrow.css'
+    ]
+    
+    js :application, '/js/application.js', [
+      '/js/highlight.js/highlight.pack.js'
     ]
 
     prebuild true
