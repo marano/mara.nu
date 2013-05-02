@@ -22,7 +22,8 @@ class Controller < Sinatra::Base
     ]
 
     prebuild true
-    css_compression :less
+    js_compression  :jsmin
+    css_compression :simple
   }
 
   def blog
