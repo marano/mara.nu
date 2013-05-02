@@ -10,7 +10,7 @@ So I started building the website with Sinatra (yes! it still take less lines th
 
 ## rollin
 
-Rollin is a Ruby blog library. It is filesystem based and currently supports Markdown. It will your articles and provides archiving.
+Rollin is a Ruby blog library. It renders your articles and provides archiving. Files are read from the filesystem in the Markdown format.
 
 This is how it works. Add `gem 'rollin'` to the project Gemfile. And write your articles with the following structure:
 
