@@ -5,15 +5,15 @@ class Controller < Sinatra::Base
   register Sinatra::AssetPack
 
   assets {
-    Less.paths << 'views/style'
-    Less.paths << 'views/style/bootstrap'
+    Less.paths << 'css'
+    Less.paths << 'css/bootstrap'
 
-    serve '/style', from: 'views/style'
+    serve '/css', from: 'css'
     serve '/js', from: 'js'
 
-    css :application, '/style/application.css', [
-      '/style/bootstrap/bootstrap.css',
-      '/style/my.css',
+    css :application, '/css/application.css', [
+      '/css/bootstrap/bootstrap.css',
+      '/css/my.css',
       '/js/highlight.js/styles/tomorrow.css'
     ]
     
