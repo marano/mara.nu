@@ -7,10 +7,48 @@ a:hover {
 }
 
 .header {
-  .title a {
-    color: @textColor;
-    &:hover {
-      color: @linkColorHover;
+  .title {
+    display: inline-block;
+    h1 {
+      a {
+        color: @textColor;
+
+        &:hover {
+          color: @linkColorHover;
+        }
+      }
+    }
+  }
+
+  .menu {
+    float: right;
+    margin-top: 10px;
+    display: inline-block;
+
+    ul {
+      margin: 0;
+      margin-left: 20px;
+
+      list-style: none;
+      li {
+        line-height: 50px;
+        display: inline-block;
+        font-size: 20px;
+        margin-right: 10px;
+        background-color: @textColor;
+        a {
+          display: inline-block;
+          height: 50px;
+          padding: 0 10px;
+
+          color: @white;
+
+          &:hover {
+            background-color: @linkColorHover;
+          }
+        }
+
+      }
     }
   }
 }
@@ -62,6 +100,11 @@ a:hover {
 
   .body {
     font-family: @serifFontFamily;
+
+    h2, h3, h4, h5, h6 {
+      font-family: @sansFontFamily;
+    }
+
     font-size: 16px;
     margin-top: 40px;
 
