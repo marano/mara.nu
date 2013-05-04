@@ -10,77 +10,16 @@ So I started building the website with Sinatra (yes! it still take less lines th
 
 ## rollin
 
-Rollin is a Ruby blog library. It renders your articles and provides archiving. Files are read from the filesystem in the Markdown format.
+Rollin is a Ruby blog library. It renders your articles, provides search and archiving. Files are read from the filesystem in the Markdown format. Current list of features:
 
-This is how it works. Add `gem 'rollin'` to the project Gemfile. And write your articles with the following structure:
+	* Loads articles from a defined filesystem structure.
+	* Renders articles in the markdown format.
+	* Allows article specification with metatags similar to Jekyll's yaml front matter.
+	* Search articles by date.
+	* Search articles by metatags.
+	* Provides archiving by year and monthly.
 
-    ├── articles
-        └── 2013_05_01_My_first_post.mk
-
-And then you can use the this API to access your posts.
-
-    blog = Rollin::Blog.new()
-    
-    first_post = blog.articles.first
-    
-    first_post.id     # => "2013_05_01_My_first_post"
-    first_post.title  # => "My first post"
-    first_post.body   # => "<h3>My first post!</h3>\n<p>blah blah blah</p>"
-
-And monthly archive.
-
-    may_archive = blog.monthly_archive.first
-    
-    may_archive.year      # => 2013
-    may_archive.month     # => 5
-    may_archive.articles  # => [ Rollin::Article(:title => "My first post" ...) ]
-
-And annual archive.
-
-    twenty_thirteen_archive = blog.annual_archive.first
-    
-    twenty_thirteen_archive.year                 # => 2013
-    twenty_thirteen_archive.articles             # => [ Rollin::Article(:title => "My first post" ...) ]
-    twenty_thirteen_archive.monthly_archive      # => [ Rollin::MonthArchive(:year => 2013, :month => 5 ...) ]
-
-
-And this is how to you find a post.
-
-    blog.find_article_by_id('2013_05_01_My_first_post')  # => #Rollin::Article(:title => "My first post" ...)
-
-So you could have something like in your controller.
-
-    get '/' do
-      @articles = blog.articles
-      @monthly_archive = blog.monthly_archive
-      erb :home
-    end
-
-    get '/article/:article_id' do
-      @article = blog.find_article_by_id(params[:article_id])
-      erb :article
-    end
-
-You could make an archive sidebar with similar code.
-
-    # home.erb
-
-    <ul class='sidebar'>
-      <% @monthly_archive.each do |month_archive| %>
-        <li><%= month_archive.year >/<%= month_archive.month %></li>
-      <% end %>
-    </ul>
-
-And have the post displayed with.
-
-    <h2 class='title'><%= @article.title %></h2>
-    <div class='content'><%= @article.body %></h2>
-
-You can find a more detailed documentation at [github](http://github/com/marano/rollin).
-
-### Concerns
-
-Since it is meant to be used in a blogging domain it is not optimized with caching. You should implement cache in the infrastructure layer, what shouldn't be hard in a mostly static environment. I use the awesome Varnish, which also allows me to have several domains pointing to different applications running on the same server.
+You can read the full documentation at the [rollin github page](https://github.com/marano/rollin).
 
 ### Future
 
