@@ -40,7 +40,7 @@ class Controller < Sinatra::Base
   end
 
   get '/article/:id' do
-    @article = blog.find_article_by_id(params[:id])
+    @article = blog.article(params[:id])
     slim :article
   end
 
