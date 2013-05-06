@@ -8,7 +8,9 @@ I had some problems with the WineBottler and, being a developer, I prefer to use
 
 A pro tip before you start: if you know how to use git, creat a git repository the first time you extract the Dwarf Fortress directory, and commit each time you merge another folders with it. It can make your life a lot easier if something goes wrong, and it's a nice way to keep the game files changes.
 
-1. Homebrew. If you already have it skip to step 2. 
+1. You gonna need homebrew setup.
+
+    1.1 Instalating homebrew:
 
         ruby -e "$(curl -fsSL https://raw.github.com/mxcl/homebrew/go)"
 
@@ -26,11 +28,10 @@ A pro tip before you start: if you know how to use git, creat a git repository t
 
 5. Grab Dwarf Therapist from [here](https://code.google.com/p/dwarftherapist/downloads/detail?name=DwarfTherapist-0.6.12.zip&can=2&q=). Unzip it, and copy it to `~/.wine/drive_c/Program Files`.
 
-6. Choose a tile set or skip it if you don't want one or you plan to install a Major mod.
-
-    * Ironhand [Thread](http://dffd.wimbli.com/file.php?id=6307) [Download](http://dffd.wimbli.com/download.php?id=6307&f=Ironhand+0.73.zip)
-    * Phoebus [Thread](http://www.bay12forums.com/smf/index.php?topic=57557.0) [Download](http://dffd.wimbli.com/download.php?id=2430&f=Phoebus_34_11v00.zip)
-    * Mayday [Site](http://artgoblin.pl/df.php) [Download](http://artgoblin.pl/upload/DFG/dfg_34_11_win.zip) (Not compatible with the Modest mod.)
+6. Choose a tile set or skip it if you don't want one, or you plan to install a Major mod.
+    * Ironhand [thread](http://dffd.wimbli.com/file.php?id=6307) | [download](http://dffd.wimbli.com/download.php?id=6307&f=Ironhand+0.73.zip)
+    * Phoebus [thread](http://www.bay12forums.com/smf/index.php?topic=57557.0) | [download](http://dffd.wimbli.com/download.php?id=2430&f=Phoebus_34_11v00.zip)
+    * Mayday [site](http://artgoblin.pl/df.php) | [download](http://artgoblin.pl/upload/DFG/dfg_34_11_win.zip) (not sure if compatible with Modest Mod)
 
     Extract the tile set and copy it to the Dwarf Fortress directory. You can use ditto, for example:
 
@@ -41,7 +42,6 @@ A pro tip before you start: if you know how to use git, creat a git repository t
 7. Modest mod. You may skip it if you like. Or you can choose another mod from [here](http://dwarffortresswiki.org/index.php/DF2012:List_of_mods), check for compatibility with tile set. From the Modest Mod ([thread](http://www.bay12forums.com/smf/index.php?topic=105871.0)) description:
 
     > The Modest Mod is a collection of vital bugfixes and tweaks that everyone should be able to use comfortably and without reservation. This mod doesn't add anything new. It doesn't do anything controversial.
-
     * [Standard version](http://dffd.wimbli.com/download.php?id=6028&f=Modest+Mod.zip)
     * [Phoebus version](http://dffd.wimbli.com/file.php?id=6843)
     * [Ironhand version](http://dffd.wimbli.com/download.php?id=6844&f=Modest+Mod+-+Ironhand.zip)
