@@ -1,3 +1,5 @@
+![rollin](/images/rollin_shirt.jpg)
+
 ## Yet another Ruby blog
 
 I recently moved to China, and the past three days was a big holiday here. My Chinese is still pretty bad and it kinda of limits my, let's say, entertainment options. And that's why I ended up studying Javascript frameworks in order to do a presentation at the office. After jumping from blog to blog I've gathered some amount of data around this topic in a big markdown file. And then I thought - wouldn't it be great if could publish it on blog? I have a bunch of stuff I want to post about and now seemed a perfect time to start it. So let's stop talking about me.
@@ -12,12 +14,12 @@ So I started building the website with Sinatra (yes! it still take less lines th
 
 Rollin is a Ruby blog library. It renders your articles, provides search and archiving. Files are read from the filesystem in the Markdown format. Current list of features:
 
-	* Loads articles from a defined filesystem structure.
-	* Renders articles in the markdown format.
-	* Allows article specification with metatags similar to Jekyll's yaml front matter.
-	* Search articles by date.
-	* Search articles by metatags.
-	* Provides archiving by year and monthly.
+  * Loads articles from a defined filesystem structure.
+  * Renders articles in the markdown format.
+  * Allows article specification with metatags similar to Jekyll's yaml front matter.
+  * Search articles by date.
+  * Search articles by metatags.
+  * Provides archiving by year and monthly.
 
 You can read the full documentation at the [rollin github page](https://github.com/marano/rollin).
 
