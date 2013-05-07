@@ -10,6 +10,7 @@ class Controller < Sinatra::Base
 
     serve '/css', from: 'css'
     serve '/js', from: 'js'
+    serve '/images', from: 'images'
 
     css :application, '/css/application.css', [
       '/css/bootstrap/bootstrap.css',

@@ -1,6 +1,16 @@
+![Dwarf Fortress Screenshot](/images/dwarf_fortress_screenshot.png)
+
+## What is Dwarf Fortress?
+
+From Dwarf Fortress [Features page](http://www.bay12games.com/dwarves/features.html):
+
+> Dwarf Fortress is a single-player fantasy game. You can control a dwarven outpost or an adventurer in a randomly generated, persistent world.
+
+If you want to lear more about it I suggest reading the awesome [Dwarf Fortress Explained](http://df.zweistein.cz/) article. To get started and learn how to play I recommend JuryDutySummons [How To Get Started with Dwarf Fortress](http://www.youtube.com/watch?v=CQxmrA06tV8) videos.
+
 ## Dwarf Fortress 0.34.11 and Dwarf Therapist on Mountain Lion
 
-There are varies ways to run Dwarf Fortress on a Mac. The easy one, is to get the Mac version from the [download page](http://www.bay12games.com/dwarves/). The problem with that method is that Dwarf Therapist, an indispensable tool for playing Dwarf Fortress, won't work with the its lates version 0.34.11. So the best way to play it is via wine, that won't make it any worse and the game will run fine without requiring configuration tweaking, something that you need to do even with the Mac version. By the way, if you download the Mac version, don't forget to change `PRINT_MODE: 2D` to `PRINT_MODE: STANDARD`, and `TRUETYPE: YES` to `TRUETYPE: NO`, in `data/init.txt`.
+There are varies ways to run Dwarf Fortress on a Mac. The easy one, is to get the Mac version from the [download page](http://www.bay12games.com/dwarves/). The problem with that method is that Dwarf Therapist, an indispensable tool for playing Dwarf Fortress, won't work with its latest version 0.34.11. So the best way to play it is via wine, that won't make it any worse and the game will run fine without requiring configuration tweaking, something that you need to do even with the Mac version. By the way, if you download the Mac version, don't forget to change `PRINT_MODE: 2D` to `PRINT_MODE: STANDARD`, and `TRUETYPE: YES` to `TRUETYPE: NO`, in `data/init.txt`.
 
 Alternatively, you may install it using the [WineBottler](http://winebottler.kronenberg.org/). For instructions see it [here](http://dwarffortresswiki.org/index.php/DF2012:Utilities#Dwarf_Therapist_and_Dwarf_Fortress_on_Mac_using_Wine).
 
