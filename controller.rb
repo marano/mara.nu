@@ -38,13 +38,16 @@ class Controller < Sinatra::Base
     slim :home
   end
 
-  get '/about' do
-    slim :about
+  get '/:year/:month/:day/:title' do
+    year = params[:year]
+    month = params[:month]
+    day = params[:day]
+    @article = blog.article("#{year}_#{month}_#{day}_#{params[:title]}")
+    slim :article
   end
 
-  get '/article/:id' do
-    @article = blog.article(params[:id])
-    slim :article
+  get '/about' do
+    slim :about
   end
 
   get '/rss.xml' do
@@ -71,7 +74,9 @@ end
 
 class Rollin::Article
   def relative_link_to_self
-    "/article/#{id}"
+    formatted_month = "%02d" % month
+    formatted_day = "%02d" % day
+    "/#{year}/#{formatted_month}/#{formatted_day}/#{id[11..(id.length - 1)]}"
   end
 
   def link_to_self
