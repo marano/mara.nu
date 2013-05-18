@@ -35,6 +35,11 @@ class Controller < Sinatra::Base
 
   get '/' do
     @articles = blog.articles
+
+    @description = 'Thiago Marano blog'
+    articles_keywords = @articles.map(&:title).join(' ').split(' ').join(', ')
+    @keywords = "Thiago Marano, Thiago, Marano, blog, #{articles_keywords}"
+
     slim :home
   end
 
@@ -42,7 +47,12 @@ class Controller < Sinatra::Base
     year = params[:year]
     month = params[:month]
     day = params[:day]
+
     @article = blog.article("#{year}_#{month}_#{day}_#{params[:title]}")
+
+    @description = @article.title
+    @keywords = @article.title.split(' ').join(', ')
+
     slim :article
   end
 
