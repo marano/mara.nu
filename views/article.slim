@@ -7,6 +7,8 @@
     .day
       = @article.day.ordinal
   h1.title-article
-    == @article.title
+    = @article.title
   .body
     == @article.body
+  .comments
+    == File.read('views/_livefyre.html')
