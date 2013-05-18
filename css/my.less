@@ -55,9 +55,13 @@ a:hover {
 .container {
   margin-top: 20px;
 
-  .about p {
-    font-family: @serifFontFamily;
-    font-size: 16px;
+  .about {
+    margin-bottom: 40px;
+
+    p {
+      font-family: @serifFontFamily;
+      font-size: 16px;
+    }
   }
 }
 
@@ -67,14 +71,14 @@ a:hover {
 
 .footer {
   clear: both;
-  margin-top: 40px;
+  margin-top: 10px;
   margin-bottom: 20px;
   text-align: center;
 }
 
 // home
 
-.article-entry {
+.article-entry-home {
   margin-bottom: 40px;
   clear: both;
 
@@ -88,7 +92,7 @@ a:hover {
     }
   }
 
-  .title-home h2 {
+  .title h2 {
     line-height: 40px;
     font-size: 40px;
   }
@@ -97,7 +101,17 @@ a:hover {
 // article
 
 .article-entry {
-  .title-article {
+  .date {
+    float: left;
+    margin-right: 20px;
+    line-height: 14px;
+
+    .year, .day {
+      font-size: 70%;
+    }
+  }
+
+  .title {
     line-height: 40px;
     font-size: 45px;
   }
@@ -123,5 +137,9 @@ a:hover {
     blockquote p {
       font-size: @baseFontSize;
     }
+  }
+
+  .comments {
+    margin-top: 40px;
   }
 }

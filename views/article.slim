@@ -6,7 +6,9 @@
       = @article.month.to_month
     .day
       = @article.day.ordinal
-  h1.title-article
+  h1.title
     == @article.title
   .body
     == @article.body
+  .comments
+    .fb-comments data-href="http://mara.nu" data-width="940" data-num-posts="50"

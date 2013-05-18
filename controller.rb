@@ -53,6 +53,8 @@ class Controller < Sinatra::Base
     @description = @article.title
     @keywords = @article.title.split(' ').join(', ')
 
+    @load_facebook = true
+
     slim :article
   end
 
