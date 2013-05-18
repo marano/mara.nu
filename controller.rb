@@ -1,6 +1,8 @@
 class Controller < Sinatra::Base
 
-  use Rack::GoogleAnalytics, :tracker => 'UA-40550953-1'
+  if ENV['RACK_ENV'] == 'production'
+    use Rack::GoogleAnalytics, :tracker => 'UA-40550953-1'
+  end
 
   register Sinatra::AssetPack
 
